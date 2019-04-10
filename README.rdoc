@@ -150,7 +150,9 @@ And to access those URLs:
 
 === Shortened URLs with custom unique key
 
-You can pass in your own key when generating a shortened URL. This should be unique.
+You can pass in your own key when generating a shortened URL. This should be unique.  
+
+*Important:* Custom keys can't contain characters other than those defined in *Shortener.charset*. Default is numbers and lowercase a-z (See *Configuration*).
 
   Shortener::ShortenedUrl.generate("example.com", owner: user, custom_key: "my-key")
 
